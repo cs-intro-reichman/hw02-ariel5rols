@@ -22,13 +22,20 @@ public class OneOfEachStats {
 		
 		double total_children_to_get_result = 0.0;
 		for (int i = 0; i < T; i++) {
-			int counter = 2;
-			int x = generator.nextInt(2);
-			int y = generator.nextInt(2);
+			int counter = 0;
+			double x = 0;
+			double y = 0;
+			
 			// System.out.println(x);
 			// System.out.println(y);
-			while (x == y) {
-				y = generator.nextInt(2);
+			while (x == 0 || y == 0) {
+				double randomNum = generator.nextDouble(); 
+				if (randomNum < 0.5) {
+					x++;
+				}
+				else {
+					y++;
+				}
 				counter++;
 				// System.out.println(y);
 		
