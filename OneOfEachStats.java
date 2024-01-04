@@ -18,7 +18,7 @@ public class OneOfEachStats {
 		int family_with_2 = 0,family_with_3 = 0,family_with_4 = 0, mode = 0;
 		String s_mode;
 		// 0 - boy, 1 - girl
-        Random generator = new Random(seed=2);  
+        Random generator = new Random(seed);  
 		
 		double total_children_to_get_result = 0.0;
 		for (int i = 0; i < T; i++) {
