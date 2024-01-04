@@ -8,11 +8,10 @@ public class Perfect {
 		String correct_output = k + " is a perfect number since " + k + " = 1 ";
 		for (int i = 2; i < k; i++) {
 			if (k % i == 0) {
-				System.out.println(i);
+				// System.out.println(i);
 				temp -= i;
 				correct_output += "+ " + i + " ";
 			}
-			
 		}
 
 		if (temp != 0) {
