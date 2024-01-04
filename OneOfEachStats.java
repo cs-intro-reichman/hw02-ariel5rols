@@ -25,12 +25,12 @@ public class OneOfEachStats {
 			int counter = 2;
 			int x = generator.nextInt(2);
 			int y = generator.nextInt(2);
-			System.out.println(x);
-			System.out.println(y);
+			// System.out.println(x);
+			// System.out.println(y);
 			while (x == y) {
 				y = generator.nextInt(2);
 				counter++;
-				System.out.println(y);
+				// System.out.println(y);
 		
 			}
 
@@ -52,15 +52,6 @@ public class OneOfEachStats {
 		System.out.println("Number of families with 3 children: " + family_with_3);
 		System.out.println("Number of families with 4 or more children: " + family_with_4);
 		System.out.println("The most common number of children is " + s_mode + ".");
-		//// In the previous version of this program, you used a statement like:
-		//// double rnd = Math.random();
-		//// Where "rnd" is the variable that stores the generated random value.
-		//// In this version of the program, replace this statement with:
-		//// double rnd = generator.nextDouble();
-		//// This statement will generate a random value in the range [0,1),
-		//// just like you had in the previous version, except that the 
-		//// randomization will be based on the given seed.
-		//// This is the only change that you have to do in the program.
 		    
 	}
 }
