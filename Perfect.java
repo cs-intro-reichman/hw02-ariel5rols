@@ -16,10 +16,10 @@ public class Perfect {
 		}
 
 		if (temp != 0) {
-			System.out.println(k+ " is not a perfect number" );
+			System.out.println(k+ " is not a perfect number");
 		}
 		else {
-			System.out.println(correct_output);
+			System.out.println(correct_output.strip());
 		}
 	}
 }

@@ -9,7 +9,8 @@ public class Reverse {
 			output += args[0].charAt(i);
 		}
 		System.out.println(output);
-		char middle_char = args[0].charAt(args[0].length() / 2);
-		System.out.println("The middle character is " + middle_char);
+		int len = args[0].length();
+		if (len % 2 == 1) {System.out.println("The middle character is " + args[0].charAt((len - 1) / 2));}
+		else {System.out.println("The middle character is " + args[0].charAt((len / 2)-1));}
 	}
 }
