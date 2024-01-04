@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Random;
 /**
  *  Computes some statistics about families in which the parents decide 
@@ -8,13 +9,49 @@ import java.util.Random;
  *  Example usage: % java OneOfEachStats 1000 1
  */
 public class OneOfEachStats {
+
 	public static void main (String[] args) {
 		// Gets the two command-line arguments
 		int T = Integer.parseInt(args[0]);
-		int seed = Integer.parseInt(args[1]);
+		int seed = 2; // Integer.parseInt(args[1]);
 		// Initailizes a random numbers generator with the given seed value
-        Random generator = new Random(seed);  
+		int family_with_2 = 0,family_with_3 = 0,family_with_4 = 0, mode = 0;
+		String s_mode;
+		// 0 - boy, 1 - girl
+        Random generator = new Random(seed=2);  
 		
+		double total_children_to_get_result = 0.0;
+		for (int i = 0; i < T; i++) {
+			int counter = 2;
+			int x = generator.nextInt(2);
+			int y = generator.nextInt(2);
+			System.out.println(x);
+			System.out.println(y);
+			while (x == y) {
+				y = generator.nextInt(2);
+				counter++;
+				System.out.println(y);
+		
+			}
+
+			if (counter == 2) {family_with_2++;}
+			if (counter == 3) {family_with_3++;}
+			if (counter >= 4) {family_with_4++;}
+			total_children_to_get_result += counter;
+
+		}
+
+		mode = Math.max(Math.max(family_with_2, family_with_3), family_with_4);
+		if (mode == family_with_2) {s_mode = "2";}
+		else if (mode == family_with_3) {s_mode = "3";}
+		else {{s_mode = "4 or more";}}
+		total_children_to_get_result = total_children_to_get_result / T;
+		
+		System.out.println("Average: " + total_children_to_get_result + " children to get at least one of each gender.");
+		System.out.println("Number of families with 2 children: " + family_with_2);
+		System.out.println("Number of families with 3 children: " + family_with_3);
+		System.out.println("Number of families with 4 or more children: " + family_with_4);
+		System.out.println("The most common number of children is " + s_mode + ".");
 		//// In the previous version of this program, you used a statement like:
 		//// double rnd = Math.random();
 		//// Where "rnd" is the variable that stores the generated random value.
