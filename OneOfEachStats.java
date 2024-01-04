@@ -13,7 +13,7 @@ public class OneOfEachStats {
 	public static void main (String[] args) {
 		// Gets the two command-line arguments
 		int T = Integer.parseInt(args[0]);
-		int seed = 2; // Integer.parseInt(args[1]);
+		int seed = Integer.parseInt(args[1]);
 		// Initailizes a random numbers generator with the given seed value
 		int family_with_2 = 0,family_with_3 = 0,family_with_4 = 0, mode = 0;
 		String s_mode;
